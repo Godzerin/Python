@@ -11,3 +11,213 @@
         StartingArea = input('Next, lets see what weapon you want. Your choices are \n' + 'FOREST\n'+'TUNDRA\n'+'FIELD\n'+'OCEAN\n'+'DESERT\n').lower()
         print('You will be starting in the ' + (StartingArea)+'...')
         difficultyC = input('Lastly, lets see what weapon you want. Your choices are \n' + 'EASY\n'+'MEDIUM\n'+'HARD\n').lower()'''
+
+
+'''name = input('Hello Adventurer, what is your name? ')
+
+
+
+        print('Hello, ' + (name) + ' welcome to this typed adventurer game. I will be asking a few starting questions to get your character made!')
+        raceC = input('First lets see what race you want to be, your choices are... \n' + 'HUMAN\n'+'ELF\n'+'ORC\n'+'DRAGONKIN\n').lower()
+        race = raceC
+        print('Perfect, you have chosen ' + (race) + '...')
+        weapon = input('Alright second, lets see what weapon you want, your choices are... \n' + 'SWORD 12\n'+'DAGGER 9\n'+'GREATAXE 15\n').lower()
+        print('You have chosen ' + (weapon) + '...')
+        StartingArea = input('Next, lets see what weapon you want. Your choices are \n' + 'FOREST\n'+'TUNDRA\n'+'FIELD\n'+'OCEAN\n'+'DESERT\n').lower()
+        print('You will be starting in the ' + (StartingArea)+'...')
+        difficultyC = input('Lastly, lets see what weapon you want. Your choices are \n' + 'EASY\n'+'MEDIUM\n'+'HARD\n').lower()
+        
+        difficulty == difficultyC
+        if difficulty == "easy":
+            print("So you don't want a challenge?")
+        elif difficulty == 'medium':
+            print('This should be the default AT LEAST')
+        elif difficulty == 'hard':
+            print('As you should')
+            '''
+
+
+'''
+import random
+
+MermaidAmbush = {'Health' : '150',}
+
+PirateRaid = {}
+
+PirateRaid['Health']= random.randint(150,175)
+
+
+print(PirateRaid)
+'''
+
+#Character class
+
+"""from theDesert import Desert
+from theField import Field
+from theForest import Forest
+from theOcean import Ocean
+from theTundra import Tundra
+
+class Avatar:
+    
+    def __init__(self, Race, Weapon, StartingArea, Difficulty):
+        # Getting the attributes
+        self.Race = Race
+        self.Weapon = Weapon
+        self.StartingArea = StartingArea
+        self.Difficulty = Difficulty
+        self.Damage = 0
+        self.Health = 0
+        self.Ability = ""
+        self.Location = None
+        self.set_damage()
+        self.set_species()
+        self.set_location()
+    
+    def set_damage(self):
+        if self.Weapon == 'sword':
+            self.Damage = 12
+        elif self.Weapon == 'dagger':
+            self.Damage = 9
+        elif self.Weapon == 'greataxe':
+            self.Damage = 15
+        else:
+            self.Damage = 0  # Default value for invalid weapon choices
+
+    def set_location(self):
+        if self.StartingArea == 'forest':
+            self.Location = Forest
+        elif self.StartingArea == 'tundra':
+            self.Location = Tundra
+        elif self.StartingArea == 'ocean':
+            self.Location = Ocean
+        elif self.StartingArea == 'field':
+            self.Location = Field
+        elif self.StartingArea == 'desert':
+            self.Location = Desert
+        else:
+            self.Location = None  # Default value for invalid area choices
+
+    def set_species(self):
+        if self.Race == 'human':
+            self.Health = 100
+            self.Ability = 'Dash'
+        elif self.Race == 'elf':
+            self.Health = 90
+            self.Ability = 'Mana Missile'
+        elif self.Race == 'orc':
+            self.Health = 110
+            self.Ability = 'Crush'
+        elif self.Race == 'dragonkin':
+            self.Health = 120
+            self.Ability = 'Dragon Breath'
+        elif self.Race == 'test':
+            self.Health = 10000000
+            self.Ability = 'Kill'
+        else:
+            self.Health = 0  # Default value for invalid race choices
+            self.Ability = 'None'
+
+    def game_mode(self):
+        if self.Difficulty == 'easy':
+            pass
+        elif self.Difficulty == 'medium':
+            pass
+        elif self.Difficulty == 'hard':
+            pass
+        else:
+            pass  # Optionally handle invalid difficulty levels
+
+print('Hello from character')
+"""
+
+#Location classes copypaste
+
+"""import random
+
+class Desert:
+    
+    def __init__(self,Encounters,LootPool,Dialogue,start):
+        self.encounters = Encounters
+        self.LootPool = LootPool
+        self.dialogue = Dialogue
+        self.start = start"""
+
+
+'''def begginning():
+    print('Welcome to the Adventure game! Lets start by making your character. . .')
+    UserName = input('What would you like your character name to be? ')
+    NameCheck = input('You want your name to be ' + (UserName) + '?' + ' Yes/No\n').lower()
+    while NameCheck != 'yes':
+         UserName = input('What would you like your characters name to be?')
+         NameCheck = input('You want your name to be ' + (UserName) + '?' + ' Yes/No\n').lower()
+         if NameCheck == 'yes':
+             break    
+    print('Perfect! Now ' + (UserName) + 'What weapon would you like?')
+    WeaponChoice = input('Sword\n' + 'Dagger\n' + 'GreatAxe\n').lower()
+
+# Use the 'and' operator to check if the choice is not any of the valid options
+    while WeaponChoice != '1' and WeaponChoice != '2' and WeaponChoice != '3':
+         print('Please select a valid weapon choice.')
+         WeaponChoice = input('\n1. Sword\n' + '\n2. Dagger\n' + '\n3. GreatAxe\n\n').lower()
+    if WeaponChoice == "1":
+        Weapon = 'sword'
+    elif WeaponChoice == '2':
+        weapon = 'dagger'
+    elif WeaponChoice == '3':
+        weapon = 'greataxe'
+# At this point, the user has chosen a valid weapon
+    print(WeaponChoice + " that's a great choice.")
+# 
+    LocationChoice = input('Where would you like to start?\nForest\nTundra\nOcean\nField\nDesert\n\n').lower()
+    print('Alright you will be starting in the ' + (LocationChoice) + '...')
+    RaceChoice = input('What race would you like your character to be?\nHuman\nElf\nOrc\nDragonkin\n\n').lower()
+    print((UserName)+' you will be a ' + (RaceChoice))
+    DifficultyChoice = input('Alright one last thing. What would you like your difficulty to be?\nEasy\nMedium\nHard\n\n').upper()
+    print('You will be starting on the ' + (DifficultyChoice) + ' difficulty...')'''
+
+
+'''elif encounter == 'goblin':
+        print('A goblin jumped out in front of you\n')
+        gHealth = goblin[0]
+        while gHealth > 0:
+            gDamage = goblin[1]
+            health -= gDamage
+            time.sleep(2)
+            if gDamage == 'blocked':
+                gDamage = 0
+                print(f'You blocked the goblins attack your health is now {health}\n')
+            else:
+                print(f'\nThe goblin did {gDamage} your health is now {health}\n')
+            
+            if health <= 0: #Checking if player has died
+                print('You have died.')
+                Alive = False
+                break
+            
+            FightMenu(AdventureCompletion)
+            FightPrompt = input('What would you like to do?')
+            if FightPrompt == '1': # Attack
+                gHealth -= damage
+                if gHealth <0:
+                    gHealth = 0
+                print(f'You did {damage} to the goblin, it has {gHealth} health left...')
+            elif FightPrompt == '2': # Block
+                blockReduction = random.randint(7, 15)
+                gDamage = max(gDamage - blockReduction, 0)  # Ensure that gDamage does not go below 0
+                print(f'You blocked {blockReduction}')
+            elif FightPrompt == '3': #skill list
+                print('Skill list coming soon...')
+            elif FightPrompt == '4': # Rest
+                rest(health)
+                print('You rested and gained health')
+            elif FightPrompt == '5': #Run
+                print('You ran away')
+                break
+            if gHealth <= 0: #Goblin death
+                time.sleep(1)
+                print("\nYou have defeated the goblin\n")
+                money_drop = random.randint(25,50)
+                money += money_drop
+                print(f'\nYou found {money_drop} money. You now have {money}.\n')
+                break'''
